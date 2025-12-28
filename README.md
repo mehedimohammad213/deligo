@@ -1,1 +1,1 @@
-# Deligo Project
+# Deligo Project\n\nThis repository contains the Deligo ride-sharing platform.\n\n## Structure\n\n- `deligo_backend/` - Backend API server\n- `deligo-ride-admin-fleet-panel-frontend/` - Frontend admin panel
