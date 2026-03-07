@@ -13,7 +13,8 @@
   <circle cx="100" cy="100" r="98" fill="url(#green)"/>
   <circle cx="100" cy="100" r="98" fill="none" stroke="url(#gold)" stroke-width="3"/>
   <!-- KG – high contrast -->
-  <text x="100" y="112" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="bold" fill="#F5F5DC">KG</text>
-  <!-- Small oil droplet accent below -->
-  <path d="M100 132 C92 132 86 138 86 146 C86 154 92 160 100 160 C108 160 114 154 114 146 C114 138 108 132 100 132 Z" fill="url(#gold)" opacity="0.9"/>
+  <text x="100" y="108" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="bold" fill="#F5F5DC">KG</text>
+  <!-- Leaf accent (natural / oil) -->
+  <path d="M100 118 C88 128 82 142 85 154 C88 162 94 166 100 166 C106 166 112 162 115 154 C118 142 112 128 100 118 Z" fill="url(#gold)" opacity="0.95"/>
+  <path d="M100 166 L100 172" stroke="url(#gold)" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
 </svg>

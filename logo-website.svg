@@ -12,8 +12,10 @@
   <!-- Icon: circle with KG -->
   <circle cx="60" cy="60" r="52" fill="url(#green-w)"/>
   <circle cx="60" cy="60" r="52" fill="none" stroke="url(#gold-w)" stroke-width="2.5"/>
-  <text x="60" y="68" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#F5F5DC">KG</text>
-  <path d="M60 82 C55 82 51 85.5 51 90.5 C51 95.5 55 99 60 99 C65 99 69 95.5 69 90.5 C69 85.5 65 82 60 82 Z" fill="url(#gold-w)" opacity="0.9"/>
+  <text x="60" y="64" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#F5F5DC">KG</text>
+  <!-- Leaf accent -->
+  <path d="M60 72 C52 78 48 86 50 92 C52 96 56 98 60 98 C64 98 68 96 70 92 C72 86 68 78 60 72 Z" fill="url(#gold-w)" opacity="0.95"/>
+  <path d="M60 98 L60 102" stroke="url(#gold-w)" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
   <!-- Company name -->
   <text x="130" y="52" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="url(#green-w)">Kather Ghani</text>
   <text x="130" y="82" font-family="Georgia, serif" font-size="14" fill="#5a5a5a" letter-spacing="0.05em">Premium Oil</text>

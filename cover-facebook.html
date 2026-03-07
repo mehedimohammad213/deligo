@@ -91,10 +91,21 @@
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText('KG', cx, cy - 4);
-        ctx.fillStyle = 'rgba(201, 162, 39, 0.9)';
+        // Leaf accent below KG
+        ctx.fillStyle = 'rgba(201, 162, 39, 0.95)';
         ctx.beginPath();
-        ctx.ellipse(cx, cy + 22, 8, 10, 0, 0, Math.PI * 2);
+        ctx.moveTo(cx, cy + 12);
+        ctx.bezierCurveTo(cx - 14, cy + 22, cx - 18, cy + 38, cx - 14, cy + 48);
+        ctx.bezierCurveTo(cx - 10, cy + 54, cx - 4, cy + 56, cx, cy + 56);
+        ctx.bezierCurveTo(cx + 4, cy + 56, cx + 10, cy + 54, cx + 14, cy + 48);
+        ctx.bezierCurveTo(cx + 18, cy + 38, cx + 14, cy + 22, cx, cy + 12);
         ctx.fill();
+        ctx.strokeStyle = 'rgba(201, 162, 39, 0.85)';
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy + 56);
+        ctx.lineTo(cx, cy + 64);
+        ctx.stroke();
 
         // Company name and tagline (center-right)
         ctx.fillStyle = '#F5F5DC';
