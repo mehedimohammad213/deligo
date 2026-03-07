@@ -9,8 +9,10 @@
       <stop offset="100%" style="stop-color:#1a3d32"/>
     </linearGradient>
   </defs>
-  <!-- No background, no border -->
-  <!-- K + O-shaped G with leaf inside (centered) -->
+  <!-- White background -->
+  <rect width="200" height="200" fill="#ffffff"/>
+  <!-- K + O-shaped G with leaf inside (centered in viewBox) -->
+  <g transform="translate(9, 20)">
   <!-- Custom K – clear K shape (stroke style like G), aligned with G -->
   <path d="M62 70 L62 96 M62 80 L90 70 M62 80 L90 96" fill="none" stroke="#800000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- G shape (O with flat bottom, cut on right) -->
@@ -18,4 +20,5 @@
   <!-- Leaf inside the O -->
   <path d="M118 68 C114 71 112 76 113 80 C114 83 116 85 118 85 C120 85 122 83 123 80 C124 76 122 71 118 68 Z" fill="url(#gold)" opacity="0.95"/>
   <path d="M118 85 L118 88" stroke="url(#gold)" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+  </g>
 </svg>
