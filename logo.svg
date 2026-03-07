@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C547"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5a4a"/>
+      <stop offset="100%" style="stop-color:#1a3d32"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle - works on Facebook and dark sections -->
+  <circle cx="100" cy="100" r="98" fill="url(#green)"/>
+  <circle cx="100" cy="100" r="98" fill="none" stroke="url(#gold)" stroke-width="3"/>
+  <!-- KG – high contrast -->
+  <text x="100" y="112" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="bold" fill="#F5F5DC">KG</text>
+  <!-- Small oil droplet accent below -->
+  <path d="M100 132 C92 132 86 138 86 146 C86 154 92 160 100 160 C108 160 114 154 114 146 C114 138 108 132 100 132 Z" fill="url(#gold)" opacity="0.9"/>
+</svg>

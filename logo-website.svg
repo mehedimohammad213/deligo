@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="gold-w" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C547"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="green-w" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5a4a"/>
+      <stop offset="100%" style="stop-color:#1a3d32"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon: circle with KG -->
+  <circle cx="60" cy="60" r="52" fill="url(#green-w)"/>
+  <circle cx="60" cy="60" r="52" fill="none" stroke="url(#gold-w)" stroke-width="2.5"/>
+  <text x="60" y="68" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#F5F5DC">KG</text>
+  <path d="M60 82 C55 82 51 85.5 51 90.5 C51 95.5 55 99 60 99 C65 99 69 95.5 69 90.5 C69 85.5 65 82 60 82 Z" fill="url(#gold-w)" opacity="0.9"/>
+  <!-- Company name -->
+  <text x="130" y="52" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="url(#green-w)">Kather Ghani</text>
+  <text x="130" y="82" font-family="Georgia, serif" font-size="14" fill="#5a5a5a" letter-spacing="0.05em">Premium Oil</text>
+</svg>

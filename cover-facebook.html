@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kather Ghani – Facebook Cover Photo</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #1a2520;
+      color: #F5F5DC;
+    }
+    h1 { font-size: 1.25rem; margin-bottom: 1rem; }
+    .preview {
+      background: #222;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .preview canvas { display: block; max-width: 100%; height: auto; border-radius: 4px; }
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.25rem;
+      background: #B8860B;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .btn:hover { background: #996f09; }
+    .note { font-size: 0.85rem; color: #999; margin-top: 0.75rem; }
+  </style>
+</head>
+<body>
+  <h1>Facebook cover photo – Kather Ghani (KG)</h1>
+  <p class="note">820 × 312 px. Keep important content in the center so it’s visible on mobile too.</p>
+  <div class="preview">
+    <canvas id="cover" width="820" height="312"></canvas>
+  </div>
+  <button class="btn" id="downloadBtn">Download cover photo (PNG)</button>
+
+  <script>
+    (function () {
+      var W = 820, H = 312;
+      var canvas = document.getElementById('cover');
+      var ctx = canvas.getContext('2d');
+
+      function drawCover() {
+        // Background gradient (green brand)
+        var bg = ctx.createLinearGradient(0, 0, W, H);
+        bg.addColorStop(0, '#2d5a4a');
+        bg.addColorStop(0.5, '#234a3d');
+        bg.addColorStop(1, '#1a3d32');
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, W, H);
+
+        // Subtle gold accent line bottom
+        ctx.strokeStyle = 'rgba(184, 134, 11, 0.4)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(0, H - 1);
+        ctx.lineTo(W, H - 1);
+        ctx.stroke();
+
+        // Decorative oil droplets (small circles) – left and right
+        ctx.fillStyle = 'rgba(232, 197, 71, 0.15)';
+        [[120, H * 0.4], [W - 140, H * 0.55], [W - 320, H * 0.35]].forEach(function (p) {
+          ctx.beginPath();
+          ctx.arc(p[0], p[1], 28, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Logo circle + KG (left side)
+        var cx = 156, cy = H / 2, r = 72;
+        ctx.fillStyle = '#1a3d32';
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = '#C9A227';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+        ctx.fillStyle = '#F5F5DC';
+        ctx.font = 'bold 42px Georgia, serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('KG', cx, cy - 4);
+        ctx.fillStyle = 'rgba(201, 162, 39, 0.9)';
+        ctx.beginPath();
+        ctx.ellipse(cx, cy + 22, 8, 10, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Company name and tagline (center-right)
+        ctx.fillStyle = '#F5F5DC';
+        ctx.font = 'bold 48px Georgia, serif';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('Kather Ghani', 260, H / 2 - 18);
+        ctx.fillStyle = 'rgba(201, 162, 39, 0.95)';
+        ctx.font = '22px Georgia, serif';
+        ctx.fillText('Premium Oil', 260, H / 2 + 22);
+      }
+
+      drawCover();
+
+      document.getElementById('downloadBtn').addEventListener('click', function () {
+        var a = document.createElement('a');
+        a.href = canvas.toDataURL('image/png');
+        a.download = 'kather-ghani-facebook-cover.png';
+        a.click();
+      });
+    })();
+  </script>
+</body>
+</html>

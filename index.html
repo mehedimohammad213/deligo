@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kather Ghani (KG) – Logo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #fafaf8;
+      color: #1a3d32;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #1a3d32; }
+    .sub { color: #5a5a5a; font-size: 0.95rem; margin-bottom: 2rem; }
+    section {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    section h2 { font-size: 1.1rem; margin: 0 0 1rem; color: #2d5a4a; }
+    .preview {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .preview-box {
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview-box.dark { background: #1a3d32; }
+    .preview-box.profile { width: 180px; height: 180px; }
+    .preview-box.profile img { width: 170px; height: 170px; object-fit: contain; }
+    .preview-box.website img { height: 64px; width: auto; max-width: 280px; object-fit: contain; }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #2d5a4a;
+      color: #F5F5DC;
+      border: none;
+      border-radius: 8px;
+      font-family: Georgia, serif;
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .btn:hover { background: #1a3d32; }
+    .btn.secondary { background: #B8860B; color: #fff; }
+    .btn.secondary:hover { background: #996f09; }
+    #fbCanvas { display: none; }
+    .note { font-size: 0.85rem; color: #666; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Kather Ghani (KG)</h1>
+  <p class="sub">Logo assets for Facebook profile and website.</p>
+
+  <section>
+    <h2>Facebook profile picture (180×180)</h2>
+    <p>Use the square logo below. Click the button to download a PNG ready to upload.</p>
+    <div class="preview">
+      <div class="preview-box profile dark">
+        <img id="profileImg" src="logo.svg" alt="KG logo"/>
+      </div>
+    </div>
+    <button class="btn" id="downloadFb">Download PNG for Facebook (180×180)</button>
+    <p class="note">Upload this as your Facebook page profile picture. Minimum recommended size is 180×180 pixels.</p>
+  </section>
+
+  <section>
+    <h2>Website logo</h2>
+    <p>Use the horizontal logo in your header or the square logo as favicon/icon.</p>
+    <div class="preview">
+      <div class="preview-box website">
+        <img src="logo-website.svg" alt="Kather Ghani – Premium Oil" style="height: 56px;"/>
+      </div>
+      <div class="preview-box website dark">
+        <img src="logo-website.svg" alt="Kather Ghani" style="height: 56px; filter: brightness(0) invert(1); opacity(0.95);"/>
+      </div>
+    </div>
+    <a href="logo-website.svg" class="btn secondary" download>Download website logo (SVG)</a>
+    <a href="logo.svg" class="btn secondary" download>Download square logo (SVG)</a>
+    <p class="note">Use <code>logo-website.svg</code> in the header; use <code>logo.svg</code> for favicon or app icon (export to ICO/PNG as needed).</p>
+  </section>
+
+  <canvas id="fbCanvas" width="180" height="180"></canvas>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('downloadFb');
+      var img = document.getElementById('profileImg');
+      var canvas = document.getElementById('fbCanvas');
+      var ctx = canvas.getContext('2d');
+
+      btn.addEventListener('click', function () {
+        canvas.width = 180;
+        canvas.height = 180;
+        ctx.fillStyle = '#1a3d32';
+        ctx.fillRect(0, 0, 180, 180);
+        ctx.drawImage(img, 5, 5, 170, 170);
+        var a = document.createElement('a');
+        a.href = canvas.toDataURL('image/png');
+        a.download = 'kather-ghani-facebook-profile.png';
+        a.click();
+      });
+
+      img.addEventListener('load', function () {
+        btn.disabled = false;
+      });
+    })();
+  </script>
+</body>
+</html>
