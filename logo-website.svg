@@ -12,10 +12,13 @@
   <!-- Icon: circle with KG -->
   <circle cx="60" cy="60" r="52" fill="url(#green-w)"/>
   <circle cx="60" cy="60" r="52" fill="none" stroke="url(#gold-w)" stroke-width="2.5"/>
-  <text x="60" y="64" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#F5F5DC">KG</text>
-  <!-- Leaf accent -->
-  <path d="M60 72 C52 78 48 86 50 92 C52 96 56 98 60 98 C64 98 68 96 70 92 C72 86 68 78 60 72 Z" fill="url(#gold-w)" opacity="0.95"/>
-  <path d="M60 98 L60 102" stroke="url(#gold-w)" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+  <!-- K + O-shaped G with leaf inside (centered) -->
+  <!-- Custom K – clear K shape (stroke style like G), aligned with G -->
+  <path d="M40 43 L40 57 M40 48 L52 43 M40 48 L52 57" fill="none" stroke="#F5F5DC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- G shape (O with flat bottom, cut on right) -->
+  <path d="M65.2 43 A14 14 0 0 0 51.2 64 L65.2 64 L65.2 57" fill="none" stroke="#F5F5DC" stroke-width="2.5"/>
+  <path d="M63 45 C60.5 47 59 50 59.5 53 C60 55 61.5 56.5 63 56.5 C64.5 56.5 66 55 66.5 53 C67 50 65.5 47 63 45 Z" fill="url(#gold-w)" opacity="0.95"/>
+  <path d="M63 56.5 L63 59" stroke="url(#gold-w)" stroke-width="0.8" stroke-linecap="round" opacity="0.9"/>
   <!-- Company name -->
   <text x="130" y="52" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="url(#green-w)">Kather Ghani</text>
   <text x="130" y="82" font-family="Georgia, serif" font-size="14" fill="#5a5a5a" letter-spacing="0.05em">Premium Oil</text>
